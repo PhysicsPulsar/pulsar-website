@@ -1,0 +1,242 @@
+#bib_header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.29)),url(images/pile-books-bookstore.jpg);
+}
+.pdf-container {
+    display: block;
+    padding-bottom: 50px;
+}
+section{
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.relatos{
+    padding-top: 40px;
+    max-width: 450px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.relatos p{
+    text-align: justify;
+}
+.relatos ul{
+    max-width: 400px;
+    margin: auto;
+}
+.relatos li{
+    text-align: left;
+    margin: 3px;
+}
+.relatos a{
+    text-decoration: none;
+}
+.relatos button{
+    color: black;
+    font-size: 16px;
+    font-style: italic;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/*------ TRABAJOS ------*/
+.lista {
+    width: 100%;
+    background: #ebebeb;
+    padding: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+/* Título de categoría */
+.lista h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    padding-top: 15px;
+}
+
+.trabajo {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1.4rem;
+}
+
+.trabajo img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.texto-trabajo {
+  text-align: center;
+}
+
+.texto-trabajo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+.texto-trabajo h4 {
+    text-align: left;
+    font-size: 17px;
+    color: #686868;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-weight: 340;
+}
+
+.texto-trabajo p {
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;
+}
+.texto-trabajo a{
+    text-decoration: none;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .trabajo {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .trabajo img {
+    width: 50%;
+  }
+
+  .texto-trabajo {
+    width: 50%;
+    text-align: left;
+    padding-left: 2rem;
+  }
+}
+
+/*------ RECOMENDACIONES ------*/
+
+.recomendaciones {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.recomendaciones h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.grid-libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card-libro {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-libro img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.contenido {
+  padding: 1.5rem;
+}
+
+.card-libro h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.autor {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  text-align: justify;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #1e3a8a;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #162c6b;
+}
+
+.otros-libros {
+  max-width: 80%;
+  margin: 2rem auto 2rem auto;
+  padding: 0 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.otros-libros h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.lista-libros {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem 2rem;
+}
+
+/* Dos columnas en pantallas anchas */
+@media (min-width: 768px) {
+  .lista-libros {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.lista-libros li, .lista-libros a{
+  margin-bottom: 0.4rem;
+  margin-left: 20%;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: default;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lista-libros li:hover, .lista-libros a:hover{
+  color: #1e3a8a;
+  transform: translateX(4px);
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Biblioteca - Junto al Púlsar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/pulsar.png">
+    <link rel="stylesheet" href="bib_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script>
+        function updatePDF(pdfUrl) {
+          // Get the embed element and update the src attribute
+          document.getElementById("pdfViewer").src = pdfUrl;
+        }
+    </script>
+
+</head>
+
+<body>
+    <header id="bib_header">
+        <nav>
+            <a  href="index.html#projects"><img class="logo" src="images/pulsar.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img class="icon" id="close-menu" src="icons/xmark-solid-full.svg">
+                <ul>
+                    <li><a href="#relatos"> FICCIÓN</a></li>
+                    <li><a href="#trabajos"> TRABAJOS</a></li>
+                    <li><a href="#recomen"> RECOMENDACIONES</a></li>
+                    <li><a href="#contact"> CONTACTO</a></li>
+                </ul>
+            </div>
+            <img class="icon" id="open-menu" src="icons/bars-solid-full.svg">
+        </nav>
+
+        <div class="text-box">
+            <h1>Biblioteca</h1>
+            <p>Relatos y recomendaciones</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="relatos" id="relatos">
+            <h2>Relatos cortos</h2>
+            <p>
+                A veces escribo relatos cortos. Sobre todo para el concurso de la Facultad de Ciencias.
+                Aquí puedes leerlos si quieres :) 
+            </p>
+            <ul>
+                <li><button onclick="updatePDF('relatos/non_somnium.pdf')">Non somnium</button> (2025) </li>
+                <li><button onclick="updatePDF('relatos/hace_unos_minutos.pdf')">Hace unos minutos</bu> (2024) </li>
+                <li><button onclick="updatePDF('relatos/fision_del_nucleo.pdf')">La fisión del núcleo</bu> (2023) </li>
+                <li><button onclick="updatePDF('relatos/campos_flegreos.pdf')">Campos flégreos</bu> (2023) </li>
+                <li><button onclick="updatePDF('relatos/maquina_analitica.pdf')">La máquina analítica</bu> (2022)</li>
+                <li><button onclick="updatePDF('relatos/perseverancia_ingenio.pdf')">Perseverancia e Ingenio</bu> (2021)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <!-- Embedded PDF viewer -->
+        <div class="pdf-container">
+            <embed id="pdfViewer" src="relatos/fision_del_nucleo.pdf" type="application/pdf" width="800px" height="500px">
+        </div>
+    </section>
+
+    <section class="lista" id="trabajos">
+        <h2>Trabajos académicos</h2>
+
+        <div class="trabajo">
+            <img src="images/tfg.PNG">
+            <div class="texto-trabajo">
+                <h3>Trabajo de Fin de Grado</h3>
+                <h4>Autor: Javier Ramos Ortega <br> Director: Eduardo Follana Adín</h4>
+                <p>
+                    La relatividad general predice que la gravedad afecta a los rayos de luz a pesar de que
+                    no tengan masa. En este trabajo se analiza cómo se curva la luz cuando pasa cerca de un
+                    agujero negro, y en particular se estudian los efectos que tiene la rotación del mismo sobre esta deflexión.
+                </p>
+                <p>
+                    Mi TFG puede consultarse en el repositorio Zaguan: <br>
+                    <a href="https://zaguan.unizar.es/record/152780?ln=es" target="_blank">
+                        Deflexión de la luz por agujeros negros de Kerr
+                    </a>
+                </p>
+                <p>
+                    Y también en formato hilo en 
+                    <a href="https://bsky.app/profile/jramort.bsky.social/post/3mg5iaalb7k2d" target="_blank">
+                        BlueSky
+                    </a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="recomendaciones" id="recomen">
+        <h2>Recomendaciones</h2>
+
+        <div class="grid-libros">
+
+            <article class="card-libro">
+            <img src="images/lise.jpg">
+            <div class="contenido">
+                <h3>Lise Meitner: A Life in Physics</h3>
+                <p class="autor">Ruth Lewin Sime</p>
+                <p class="descripcion">
+                    La mejor biografía que he leído. Sobre la descubridora de la fisión nuclear.
+                </p>
+            </div>
+            </article>
+
+            <article class="card-libro">
+            <img src="images/sintomas.jpg">
+            <div class="contenido">
+                <h3>Saga Síntomas</h3>
+                <p class="autor">Zoé Fontanil</p>
+                <p class="descripcion">
+                    La mejor saga que he leído. Distopía futurista ambientada en España.
+                </p>
+                <a href="https://zoefontanil.com/" target="_blank" class="boton">Web de la autora</a>
+            </div>
+            </article>
+
+            <article class="card-libro">
+            <img src="images/verne.jpg">
+            <div class="contenido">
+                <h3>Obra de Julio Verne</h3>
+                <p class="autor"></p>
+                <p class="descripcion">
+                    20 000 leguas de viaje submarino, Los hijos del Capitán Grant, La isla misteriosa, De la Tierra a la Luna... <br>
+                    Para mí, la mejor ciencia ficción.
+                </p>
+            </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="otros-libros">
+    <h3>Otras lecturas recomendadas</h3>
+
+    <ul class="lista-libros">
+        <li>Yo, robot — Isaac Asimov</li>
+        <li>Un mundo feliz — Aldous Huxley</li>
+        <li>El asesinato de Sócrates — Marcos Chicot</li>
+        <li>El discurso del método — René Descartes</li>
+        <li>1808: Los cañones de Zaragoza — Fernando Lalana</li>
+        <li>Tristana — Benito Pérez Galdós</li>
+        <li>Mil soles espléndidos — Khaled Hosseini</li>
+        <li>Planilandia — Edwin A. Abbott</li>
+        <li>El gen egoísta — Richard Dawkins</li>
+        <li>La guerra de los mundos — H. G. Wells</li>
+        <a href="https://www.fourmilab.ch/babbage/sketch.html" target="_blank" 
+        style="text-decoration: none; cursor: pointer;">
+            Sketch of the Analytical Engine — Ada Lovelace
+        </a>
+        <li>El lazarillo de Tormes — Anónimo</li>
+    </ul>
+    </section>
+
+    <!----- Footer ---->
+    <div id="footer-placeholder"></div>
+    <script>
+        const fetchFooter = async () => {
+        try {
+            const res = await fetch("footer.txt");
+            const template = await res.text();
+            const parse = new DOMParser();
+            const html = parse.parseFromString(template, "text/html");
+            const footer = html.querySelector("body footer");
+
+            document.body.append(footer);
+        } catch (err) {
+            console.log(err);
+        }
+        };
+        fetchFooter();
+    </script>
+
+
+
+    <!-----JS for Toggle Menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        document.getElementById("close-menu").addEventListener("click", function() {
+            navLinks.style.right = "-200px";
+        });
+        document.getElementById("open-menu").addEventListener("click", function() {
+            navLinks.style.right = "0";
+        });
+    </script>
+
+
+
+</body>
+</html>

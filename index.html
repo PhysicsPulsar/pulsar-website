@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Junto al Púlsar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/pulsar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <a  href="index.html"><img class="logo" src="images/pulsar.png"></a>
+        <div class="nav-links" id="navLinks">
+            <img class="icon" id="close-menu" src="icons/xmark-solid-full.svg">
+            <ul>
+                <li><a href="#autor"> AUTOR</a></li>
+                <li><a href="#projects"> PROYECTOS</a></li>
+                <li><a href="#kofi"> KO-FI</a></li>
+                <li><a href="#contact"> CONTACTO</a></li>
+            </ul>
+        </div>
+        <img class="icon" id="open-menu" src="icons/bars-solid-full.svg">
+    </nav>
+
+    <div class="text-box">
+        <h1>Junto al Púlsar</h1>
+        <p>Un lugar para escuchar el cosmos</p>
+    </div>
+    <div class="ani">
+        <p>
+            Fotografía por Anirudh Thakar.<br>
+            IAYC 2022. Thanks!
+        </p>
+    </div>
+</header>
+
+<main>
+<!----- Sobre mí ---->
+<section class="sobre-mi" id="autor">
+    <h1> Sobre mí </h1>
+    <div class="container">
+        <div>
+            <p>
+                Hola! Soy Javier Ramos Ortega, autor del proyecto
+                <i>Junto al Púlsar</i>. Me gadué en Física por la
+                Universidad de Zaragoza en 2024 y he sido secretario
+                de la asociación de estudiantes
+                <a href="https://bsky.app/profile/hbarraaragon.bsky.social" target="_blank">Hache Barra</a>
+                durante tres años.
+            </p>
+            <p>
+                Aquí comparto mi pasión por la física,
+                la programación, la educación, y todo lo demás. También puedes
+                seguirme en <a href="https://bsky.app/profile/jramort.bsky.social" target="_blank"> BlueSky</a>.
+            </p>
+            <p>
+                También puedes suscribirte a mi newsletter trimestral:
+            </p>
+        </div>
+        <img class="perfil" src="images/perfil_s.jpeg" title="Gracias Luis por la foto!">
+    </div>
+</section>
+
+<!----- Proyectos ---->
+<section class="projects" id="projects">
+    <h1> Proyectos personales</h1>
+    <div class="proj-grid">
+    
+        <a href="simuladores.html" class="proj-card" 
+        style="background-image: url('images/orbitales.png');">
+            <div class="layer">
+                <h3>Simuladores y juegos</h3>
+                <p>
+                    Muchos fenómenos en física son complicados de visualizar.
+                    Un buen simulador nos puede ayudar a entenderlos más y mejor.
+                </p>
+                <ul>
+                    <li>Orbitales atómicos</li>
+                    <li>Gravedad newtoniana</li>
+                </ul>
+            </div>
+        </a>
+
+        <a href="biblioteca.html" class="proj-card"
+        style="background-image: url('images/pile-books-bookstore.jpg');"> <!--freepic-->
+            <div class="layer">
+                <h3>Biblioteca</h3>
+                <p>
+                    Algunas cosas que he escrito y que he leído.
+                </p>
+                <ul>
+                    <li>Relatos cortos</li>
+                    <li>Trabajos académicos</li>
+                    <li>Mapa histórico-científico?</li>
+                    <li>Recomendaciones</li>
+                </ul>
+            </div>
+        </a>
+
+        <a href="didactica.html" class="proj-card" 
+        style="background-image: url('images/tiempos.jpg');">
+            <div class="layer">
+                <h3 style="color: white; text-shadow: 0 0 5px black;">Didáctica</h3>
+                <p style="color: white; text-shadow: 0 0 5px black;">
+                    En mi labor de profe he creado actividades y propuestas didácticas varias para todas las edades.
+                </p>
+                <ul>
+                    <li style="color: white; text-shadow: 0 0 5px black;">Situaciones de aprendizaje</li>
+                    <li style="color: white; text-shadow: 0 0 5px black;">Charlas y seminarios</li>
+                    <li style="color: white; text-shadow: 0 0 5px black;">Olimpiadas y competiciones?</li>
+                </ul>
+            </div>
+        </a>
+
+        <a href="filmoteca.html" class="proj-card"
+        style="background-image: url('images/cine.jpg');">
+            <div class="layer">
+                <h3>Canal y filmoteca</h3>
+                <p>
+                    El formato vídeo permite expresarse de una forma de más llamativa. 
+                    Suscríbete al canal de YouTube de Junto al Púlsar.
+                </p>
+                <ul>
+                    <li>Divulgación</li>
+                    <li>Actividades</li>
+                    <li>Recomendaciones</li>
+                </ul>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+<!----- Ko-Fi ---->
+<section class="ko-fi" id="kofi">
+    <h1>Ko-fi</h1>
+
+</section>
+</main>
+
+<!----- Footer ---->
+<footer id="footer-placeholder"></footer>
+<script>
+const fetchFooter = async () => {
+  try {
+    const res = await fetch("footer.txt");
+    const template = await res.text();
+    const parse = new DOMParser();
+    const html = parse.parseFromString(template, "text/html");
+    const footer = html.querySelector("body footer");
+
+    document.body.append(footer);
+  } catch (err) {
+    console.log(err);
+  }
+};
+fetchFooter();
+</script>
+
+
+<!-----JS for Toggle Menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    document.getElementById("close-menu").addEventListener("click", function() {
+        navLinks.style.right = "-200px";
+    });
+    document.getElementById("open-menu").addEventListener("click", function() {
+        navLinks.style.right = "0";
+    });
+</script>
+
+
+
+</body>
+</html>

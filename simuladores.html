@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Simuladores - Junto al Púlsar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/pulsar.png">
+    <link rel="stylesheet" href="sim_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="sim_header">
+        <nav>
+            <a  href="index.html#projects"><img class="logo" src="images/pulsar.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img class="icon" id="close-menu" src="icons/xmark-solid-full.svg">
+                <ul>
+                    <li><a href="#web"> SIMULADORES</a></li>
+                    <li><a href="#juegos"> JUEGOS</a></li>
+                    <li><a href="#contact"> CONTACTO</a></li>
+                </ul>
+            </div>
+            <img class="icon" id="open-menu" src="icons/bars-solid-full.svg">
+        </nav>
+
+        <div class="text-box">
+            <h1>Simuladores</h1>
+            <p>Web, juegos y apps</p>
+        </div>
+    </header>
+
+    <section class="categoria" id="web">
+        <h2>Simuladores</h2>
+
+        <div class="actividad">
+            <img src="images/atomic.PNG">
+            <div class="texto-actividad">
+                <h3>Orbitales atómicos</h3>
+                <p>
+                    ¿Qué son los orbitales? Descúbrelo con este simulador interactivo.
+                    Vídeo explicativo en el canal de Youtube.
+                </p>
+                <div class="enlaces">
+                    <a href="" target="_blank">Simulador web</a>
+                    <a href="" target="_blank">Vídeo explciativo</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="actividad">
+            <img src="images/gravity.png">
+            <div class="texto-actividad">
+                <h3>Gravedad newtoniana</h3>
+                <p>
+                    Visualiza las órbitas.
+                </p>
+                <div class="enlaces">
+                    <a href="https://scratch.mit.edu/projects/245562307/" target="_blank">Proyecto web de Scrath</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="actividad">
+            <img src="images/.jpg">
+            <div class="texto-actividad">
+                <h3>Through Earth</h3>
+                <p>
+                    Ve el mundo como nunca antes. App en desarrollo.
+                </p>
+                <div class="enlaces">
+                    <a href="#">Verisón web</a>
+                    <a href="#">App para movil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="categoria" id="juegos">
+        <h2>Juegos</h2>
+
+        <div class="actividad">
+            <img src="images/.PNG">
+            <div class="texto-actividad">
+                <h3>Formulingo</h3>
+                <p>
+                    Aprende formulación química como nunca antes. App en desarrollo.
+                </p>
+                <div class="enlaces">
+                    <a href="#">Formulingo web</a>
+                    <a href="#">App para movil</a>
+            </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+
+    <!----- Footer ---->
+    <div id="footer-placeholder"></div>
+    <script>
+        const fetchFooter = async () => {
+        try {
+            const res = await fetch("footer.txt");
+            const template = await res.text();
+            const parse = new DOMParser();
+            const html = parse.parseFromString(template, "text/html");
+            const footer = html.querySelector("body footer");
+
+            document.body.append(footer);
+        } catch (err) {
+            console.log(err);
+        }
+        };
+        fetchFooter();
+    </script>
+
+
+
+    <!-----JS for Toggle Menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        document.getElementById("close-menu").addEventListener("click", function() {
+            navLinks.style.right = "-200px";
+        });
+        document.getElementById("open-menu").addEventListener("click", function() {
+            navLinks.style.right = "0";
+        });
+    </script>
+
+
+
+</body>
+</html>

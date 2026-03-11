@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Didáctica - Junto al Púlsar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/pulsar.png">
+    <link rel="stylesheet" href="did_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="did_header">
+        <nav>
+            <a  href="index.html#projects"><img class="logo" src="images/pulsar.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img class="icon" id="close-menu" src="icons/xmark-solid-full.svg">
+                <ul>
+                    <li><a href="#actividades"> ACTIVIDADES</a></li>
+                    <li><a href="#charlas"> CHARLAS</a></li>
+                    <li><a href="#contact"> CONTACTO</a></li>
+                </ul>
+            </div>
+            <img class="icon" id="open-menu" src="icons/bars-solid-full.svg">
+        </nav>
+
+        <div class="text-box">
+            <h1>Didáctica</h1>
+            <p>Actividades y recursos</p>
+        </div>
+    </header>
+
+<section class="categoria" id="actividades">
+  <h2>Situaciones de aprendizaje</h2>
+
+  <div class="actividad">
+    <img src="images/reloj_solar.jpg" alt="Crea tu propio reloj solar">
+    <div class="texto-actividad">
+        <h3>Crea tu propio reloj solar</h3>
+        <p>
+            Actividad que involucra pensamiento matemático, conocimiento del medio natural y habilidades plásticas.
+            El alumnado crea su propio reloj solar de papel y aprende a utilizarlo. Expandible a más cursos, hacer guía.
+        </p>
+        <p>
+            Esta propuesta se ha llevado a la práctica con éxito en el CEIP Josefa Amar y Borbón con grupos de 6º de primaria.
+            Y forma parte del repertorio de actividades de la asociación de estudiantes Hache Barra.
+        </p>
+        <div class="enlaces">
+            <a href="recursos/reloj_solar.pdf" target="_blank">Materiales necesarios</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="actividad">
+    <img src="images/urbana.jpg" alt="Astronomía urbana" style="filter: brightness(150%);">
+    <div class="texto-actividad">
+        <h3>Astronomía urbana</h3>
+        <p>
+            Propuesta para elaborar situaciones de aprendizaje.
+            Mencionar algo de eclipses.
+        </p>
+        <div class="enlaces">
+            <a href="#">Propuesta, organización y resultados</a>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="categoria" id="charlas">
+  <h2>Charlas y seminarios</h2>
+
+  <div class="actividad">
+    <img src="images/icc2.jpeg">
+    <div class="texto-actividad">
+        <h3>Introducción a la Computación Cuántica <br> para informáticos/as</h3>
+        <p>
+            Seminario impartido en la EINA en marzo de 2026 desde el Departamento de
+            Informática e Ingeniería de Sistemas. Hubo unos 40 asistentes.
+        </p>
+        <p>
+            Según los resultados de la encuesta. La mitad de los asistentes no tenía ningún 
+            conocimiento previo de computación cuántica. Y el 60% afirmó que la charla fue
+            una muy buena introducción para ellos mismos.
+            El uso del simulador web fue muy bien valorado.
+        </p>
+        <div class="enlaces">
+            <a href="https://is.gd/Qusim" target="_blank">Simulador web</a>
+        </div>
+    </div>
+  </div>
+
+</section>
+
+    
+
+    <!----- Footer ---->
+    <div id="footer-placeholder"></div>
+    <script>
+        const fetchFooter = async () => {
+        try {
+            const res = await fetch("footer.txt");
+            const template = await res.text();
+            const parse = new DOMParser();
+            const html = parse.parseFromString(template, "text/html");
+            const footer = html.querySelector("body footer");
+
+            document.body.append(footer);
+        } catch (err) {
+            console.log(err);
+        }
+        };
+        fetchFooter();
+    </script>
+
+
+
+    <!-----JS for Toggle Menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        document.getElementById("close-menu").addEventListener("click", function() {
+            navLinks.style.right = "-200px";
+        });
+        document.getElementById("open-menu").addEventListener("click", function() {
+            navLinks.style.right = "0";
+        });
+    </script>
+
+
+
+</body>
+</html>

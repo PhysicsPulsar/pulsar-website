@@ -1,0 +1,91 @@
+#did_header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.29)),url(images/tiempos.jpg);
+}
+/* Categoría completa */
+.categoria {
+  width: 100%;
+  background: #ebebeb;
+  padding: auto;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+/* Título de categoría */
+.categoria h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  padding-top: 15px;
+}
+
+/* Actividad full-width */
+.actividad {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1.4rem;
+}
+
+.actividad img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Texto de la actividad */
+.texto-actividad {
+  text-align: center;
+}
+
+.texto-actividad h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.texto-actividad p {
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;
+}
+
+/* Enlaces */
+.enlaces a {
+  display: inline-block;
+  margin: 1rem 0.6rem;
+  padding: 0.5rem 1rem;
+  background-color: #1e3a8a;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.enlaces a:hover {
+  background-color: #162c6b;
+}
+
+/* Layout lado a lado en pantallas grandes */
+@media (min-width: 768px) {
+  .actividad {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .actividad img {
+    width: 50%;
+  }
+
+  .texto-actividad {
+    width: 50%;
+    text-align: left;
+    padding-left: 2rem;
+  }
+}
