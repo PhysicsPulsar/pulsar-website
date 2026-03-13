@@ -7,7 +7,7 @@ html{
     scroll-behavior: smooth;
 }
 header{
-    min-height: 50vh;
+    min-height: 40vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.379)),url(images/IAYC.jpg);
     background-size: cover;
@@ -20,7 +20,7 @@ header{
 .ani{
     bottom: 4%;
     position: absolute;
-    width: 30%;
+    width: 300px;
 }
 .ani p{
     color: #b8b8b8;
