@@ -7,9 +7,9 @@ html{
     scroll-behavior: smooth;
 }
 header{
-    min-height: 40vh;
+    min-height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.379)),url(images/IAYC.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.379)),url(../images/IAYC.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -100,6 +100,9 @@ nav .icon{
 }
 
 @media(max-width: 600px){
+    header{
+        hemin-height: 40vh;
+    }
     nav .icon {
         display: block;
         width: 30px;
@@ -138,8 +141,8 @@ nav .icon{
     max-width: 60%;
     margin: auto;
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 10%;
+    padding-bottom: 12%;
 }
 .sobre-mi a{
     color: #5b5b5b;
@@ -175,12 +178,16 @@ p{
 }
 
 @media(max-width: 850px){
+    .sobre-mi{
+        max-width: 85%;
+    }
     .sobre-mi div{
         flex-direction: column;
         text-align: center;
     }
     .sobre-mi p{
         max-width: 100%;
+        font-size: 14px;
     }
     .perfil{
         justify-content: center;
