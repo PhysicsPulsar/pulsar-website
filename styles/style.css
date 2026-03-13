@@ -26,6 +26,13 @@ header{
     color: #b8b8b8;
     margin-left: 5%;
 }
+
+.counter{
+    position: absolute;
+    top: 110%;
+    margin-left: 4%;
+}
+
 /*
 body{
     margin: 0;
@@ -99,6 +106,8 @@ nav .icon{
     width: 30px;
 }
 
+
+
 @media(max-width: 600px){
     header{
         hemin-height: 40vh;
@@ -141,8 +150,8 @@ nav .icon{
     max-width: 60%;
     margin: auto;
     text-align: center;
-    padding-top: 10%;
-    padding-bottom: 12%;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
 .sobre-mi a{
     color: #5b5b5b;
@@ -199,8 +208,9 @@ p{
 /*------ Proyectos ------*/
 
 .projects{
-    width: 90%;
+    width: 88%;
     margin: auto;
+    margin-bottom: 50px;
 }
 .projects h1{
     margin: 20px;
@@ -208,7 +218,7 @@ p{
 .proj-grid {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 25px;
+    gap: 30px;
 }
 
 .proj-card {
