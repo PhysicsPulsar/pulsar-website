@@ -1,29 +1,33 @@
 #film_header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.693),rgba(0, 0, 0, 0.393)),url(../images/cine.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.693),rgba(0, 0, 0, 0.393)),url(../images/clip2.jpg);
+    background-position: top;
 }
 
 .videos {
-  padding: 4rem 2rem;
-  max-width: 1200px;
+  padding: 3rem 2rem;
+  width: 80%;
+  max-width: 900px;
   margin: auto;
 }
 
 .videos h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
 }
 
 /* Grid adaptable */
 .grid-videos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
 /* Tarjeta */
 .card-video {
   background: white;
+  margin: 0 auto;
+  max-width: 90%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
