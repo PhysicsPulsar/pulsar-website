@@ -110,10 +110,11 @@ nav .icon{
 
 @media(max-width: 600px){
     header{
-        hemin-height: 40vh;
+        hemin-height: 35vh;
     }
+    
     nav .icon {
-        display: block;
+        display: none;
         width: 30px;
         margin: 10px;
         cursor: pointer;
@@ -125,6 +126,16 @@ nav .icon{
     .text-box h1{
         font-size: 30px;
     }
+    .nav-links ul{
+        margin-top: 10px;
+    }
+    .nav-links ul li{
+        padding: 10px 8px;
+    }
+    .nav-links ul li a{
+        font-size: 16px;
+    }
+    /*
     .nav-links ul li{
         display: block;
     }
@@ -142,6 +153,7 @@ nav .icon{
     .nav-links ul{
         padding: 30px;
     }
+    */
 }
 
 /*------ sobre mi ------*/
@@ -150,8 +162,8 @@ nav .icon{
     max-width: 60%;
     margin: auto;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 3%;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 .sobre-mi a{
     color: #5b5b5b;
@@ -189,6 +201,10 @@ p{
 @media(max-width: 850px){
     .sobre-mi{
         max-width: 85%;
+        padding-top: 80px;
+    }
+    .counter{
+        top: 105%;
     }
     .sobre-mi div{
         flex-direction: column;
