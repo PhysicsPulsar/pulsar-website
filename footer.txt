@@ -29,5 +29,5 @@
         </div>
     </div>
 
-    <p>© 2026 Javier Ramos Ortega.</p>
+    <p>© 2026 Javier Ramos Ortega. Web en desarrollo.</p>
 </footer>

@@ -18,13 +18,13 @@ header{
     border-radius: 50%;
 }
 .ani{
-    bottom: 4%;
+    bottom: 2%;
     position: absolute;
-    width: 300px;
+    width: 500px;
 }
 .ani p{
     color: #b8b8b8;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .counter{
@@ -139,14 +139,14 @@ nav .icon{
         font-size: 16px;
     }
     .ani{
-        bottom: -2%;
+        bottom: 2%;
         padding: 0 0 0 0;
     }
     .ani p{
         font-size: 12px;
         padding: 0 0 0 0;
         margin-left: 2%;
-
+        color: #727272;
     }
     /*
     .nav-links ul li{

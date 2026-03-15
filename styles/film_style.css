@@ -3,11 +3,22 @@
     background-position: top;
 }
 
+
 .videos {
   padding: 3rem 2rem;
   width: 80%;
   max-width: 900px;
   margin: auto;
+}
+.videos p{
+  width: 85%;
+  max-width: 750px;
+  font-size: medium;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.videos a{
+  color:#616161;
 }
 
 .videos h2 {
@@ -68,6 +79,7 @@
 .card-video p {
   font-size: 0.95rem;
   color: #444;
+  margin-bottom: 0px;
 }
 
 /*------ RECOMENDACIONES ------*/

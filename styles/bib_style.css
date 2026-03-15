@@ -111,7 +111,7 @@ section{
 }
 
 .texto-trabajo p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #444;
   text-align: justify;
 }
@@ -135,6 +135,9 @@ section{
     text-align: left;
     padding-left: 2rem;
   }
+  .texto-trabajo p {
+    font-size: 1rem;
+  }
 }
 
 /*------ RECOMENDACIONES ------*/
@@ -143,13 +146,14 @@ section{
   padding-top: 4rem;
   padding-bottom: 1rem;
   max-width: 1200px;
+  width: 85%;
   margin: auto;
 }
 
 .recomendaciones h2 {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .grid-libros {
@@ -172,7 +176,7 @@ section{
 }
 
 .contenido {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .card-libro h3 {
@@ -183,12 +187,12 @@ section{
 .autor {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .descripcion {
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   color: #444;
   text-align: justify;
 }
@@ -237,11 +241,14 @@ section{
   .lista-libros {
     grid-template-columns: 1fr 1fr;
   }
+  .lista-libros li, .lista-libros a{
+    margin-left: 20%;
+  }
 }
 
 .lista-libros li, .lista-libros a{
   margin-bottom: 0.4rem;
-  margin-left: 20%;
+  margin-left: 10%;
   text-align: left;
   font-size: 0.95rem;
   color: #555;
