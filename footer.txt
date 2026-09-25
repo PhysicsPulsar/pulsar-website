@@ -1,5 +1,6 @@
 <footer id="footer">
-    <h4>Contacto</h4>
+
+    <p>Web en desarrollo. Versión 0.2</p>
 
     <div class="footer-content">
 

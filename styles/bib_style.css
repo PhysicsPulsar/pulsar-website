@@ -1,15 +1,13 @@
-#bib_header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.29)),url(../images/principia2.jpeg);
+#bib-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2)),url(../images/principia2.jpeg);
 }
 
 .pdf-container {
     display: block;
-    padding-bottom: 50px;
     width: 90%;
-    max-width: 900px;   /* optional limit for large screens */
+    max-width: 900px;
     margin: auto;
 }
-
 #pdfViewer {
     width: 100%;
     height: 80vh;   /* 80% of screen height */
@@ -17,33 +15,33 @@
 }
 
 section{
-    max-width: 100%;
-    margin: auto;
+    width: 90%;
     text-align: center;
 }
-.relatos{
-    padding-top: 40px;
-    width: 450px;
-    max-width: 90%;
+#relatos-text{
+    width: 60%;
     margin: auto;
-    padding-bottom: 50px;
+    margin-bottom: 30px;
 }
-.relatos p{
+h2{
+    margin: 20px;
+}
+#relatos p{
     text-align: justify;
 }
-.relatos ul{
+#relatos ul{
     max-width: 400px;
     margin: auto;
     margin-left: 20px;
 }
-.relatos li{
+#relatos li{
     text-align: left;
     margin: 3px;
 }
-.relatos a{
+#relatos a{
     text-decoration: none;
 }
-.relatos button{
+#relatos button{
     color: black;
     font-size: 16px;
     font-style: italic;
@@ -54,64 +52,48 @@ section{
     cursor: pointer;
 }
 
-/*------ TRABAJOS ------*/
 .lista {
     width: 100%;
-    background: #ebebeb;
     padding: auto;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
 }
-
-/* Título de categoría */
-.lista h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #000000;
-    margin-bottom: 2rem;
-    padding-top: 15px;
-}
-
 .trabajo {
-  display: flex;
-  margin: auto;
-  width: 90%;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1.4rem;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.4rem;
 }
-
 .trabajo img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
+    width: 47%;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 12px;
+    aspect-ratio: 1.4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
 .texto-trabajo {
-  text-align: center;
+    width: 47%;
+    text-align: center;
 }
-
 .texto-trabajo h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #000000;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: #000000;
 }
 .texto-trabajo h4 {
     text-align: left;
     font-size: 17px;
     color: #686868;
     margin-bottom: 10px;
-    padding-top: 5px;
-    padding-left: 20px;
+    margin-top: 5px;
+    margin-left: 20px;
     font-weight: 340;
 }
-
 .texto-trabajo p {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 3px;
   color: #444;
   text-align: justify;
 }
@@ -120,46 +102,22 @@ section{
     font-style: italic;
 }
 
-@media (min-width: 768px) {
-  .trabajo {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .trabajo img {
-    width: 50%;
-  }
-
-  .texto-trabajo {
-    width: 50%;
-    text-align: left;
-    padding-left: 2rem;
-  }
-  .texto-trabajo p {
-    font-size: 1rem;
-  }
-}
-
 /*------ RECOMENDACIONES ------*/
 
 .recomendaciones {
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-  max-width: 1200px;
-  width: 85%;
   margin: auto;
 }
 
 .recomendaciones h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 1.8rem;
 }
 
 .grid-libros {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
 }
 
 .card-libro {
@@ -168,22 +126,18 @@ section{
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
-
 .card-libro img {
   width: 100%;
-  height: 350px;
+  aspect-ratio: 1;
   object-fit: cover;
 }
-
 .contenido {
   padding: 1rem;
 }
-
 .card-libro h3 {
   margin: 0;
   font-size: 1.3rem;
 }
-
 .autor {
   font-size: 0.9rem;
   color: #666;
@@ -221,7 +175,7 @@ section{
 
 .otros-libros h3 {
   font-size: 1.3rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 30px;
   color: #444;
   font-weight: 500;
 }
@@ -232,19 +186,10 @@ section{
   margin: 0;
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0.6rem 2rem;
 }
 
-/* Dos columnas en pantallas anchas */
-@media (min-width: 768px) {
-  .lista-libros {
-    grid-template-columns: 1fr 1fr;
-  }
-  .lista-libros li, .lista-libros a{
-    margin-left: 20%;
-  }
-}
 
 .lista-libros li, .lista-libros a{
   margin-bottom: 0.4rem;
